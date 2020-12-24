@@ -1,0 +1,3 @@
+﻿Public Class GENERADOR_DE_COPIAS_AUTOMATICO
+
+End Class

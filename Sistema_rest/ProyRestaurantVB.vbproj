@@ -1,0 +1,636 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4F71FCC6-D4FC-4AFF-B80A-9274508A8E4F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>ProyRestaurantVB.My.MyApplication</StartupObject>
+    <RootNamespace>ProyRestaurantVB</RootNamespace>
+    <AssemblyName>ProyRestaurantVB</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>ProyRestaurantVB.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>ProyRestaurantVB.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AnalysisServices, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Telerik.Reporting, Version=10.0.16.204, Culture=neutral, PublicKeyToken=a9d7983dfcc261be" />
+    <Reference Include="Telerik.ReportViewer.WinForms, Version=10.0.16.204, Culture=neutral, PublicKeyToken=a9d7983dfcc261be">
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="UIDC">
+      <HintPath>..\..\Sistema_restaurante_Codigo369 Avanzado\UIDC.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Datos\Obtener_datos.vb" />
+    <Compile Include="Logica\Agregar_ceros_adelante_De_numero.vb" />
+    <Compile Include="Logica\Cambiar_bordes_a_texboxvb.vb" />
+    <Compile Include="Logica\Cambiar_idioma_regional.vb" />
+    <Compile Include="Logica\CONEXIONMAESTRA.vb" />
+    <Compile Include="Logica\DataHelper.vb" />
+    <Compile Include="Logica\Desencryptacion.vb" />
+    <Compile Include="Logica\Encryptacion.vb" />
+    <Compile Include="Logica\Encryptar_en_texto.vb" />
+    <Compile Include="Logica\Formato_dinero.vb" />
+    <Compile Include="Logica\Numeros_separadores.vb" />
+    <Compile Include="Logica\SerialPC.vb" />
+    <Compile Include="Logica\Tamaño_automatico_de_datatables.vb" />
+    <Compile Include="Presentacion\ACOPLADO_EN_SUPERVISION\Configurar_envio_a_correo.Designer.vb">
+      <DependentUpon>Configurar_envio_a_correo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\ACOPLADO_EN_SUPERVISION\Configurar_envio_a_correo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\ACOPLADO_EN_SUPERVISION\DASHBOARD_PRINCIPAL.Designer.vb">
+      <DependentUpon>DASHBOARD_PRINCIPAL.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\ACOPLADO_EN_SUPERVISION\DASHBOARD_PRINCIPAL.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\ACOPLADO_EN_SUPERVISION\GENERADOR_DE_COPIAS_AUTOMATICO.Designer.vb">
+      <DependentUpon>GENERADOR_DE_COPIAS_AUTOMATICO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\ACOPLADO_EN_SUPERVISION\GENERADOR_DE_COPIAS_AUTOMATICO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\ACOPLADO_EN_SUPERVISION\Membresias.Designer.vb">
+      <DependentUpon>Membresias.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\ACOPLADO_EN_SUPERVISION\Membresias.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\ACOPLADO_EN_SUPERVISION\PANEL_CONFIGURACIONES.Designer.vb">
+      <DependentUpon>PANEL_CONFIGURACIONES.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\ACOPLADO_EN_SUPERVISION\PANEL_CONFIGURACIONES.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\ACOPLADO_EN_SUPERVISION\reporte_cierre_de_caja_form.Designer.vb">
+      <DependentUpon>reporte_cierre_de_caja_form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\ACOPLADO_EN_SUPERVISION\reporte_cierre_de_caja_form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\ACOPLADO_EN_SUPERVISION\VENTAS_MENU_PRINCIPAL.Designer.vb">
+      <DependentUpon>VENTAS_MENU_PRINCIPAL.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\ACOPLADO_EN_SUPERVISION\VENTAS_MENU_PRINCIPAL.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Admin\Admin_form.Designer.vb">
+      <DependentUpon>Admin_form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Admin\Admin_form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Asistente_de_instalacion_de_Caja_Secundaria\Conexion_caja_secundaria.Designer.vb">
+      <DependentUpon>Conexion_caja_secundaria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Asistente_de_instalacion_de_Caja_Secundaria\Conexion_caja_secundaria.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Asistente_de_instalacion_de_Caja_Secundaria\REGISTRO_DE_CAJA.Designer.vb">
+      <DependentUpon>REGISTRO_DE_CAJA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Asistente_de_instalacion_de_Caja_Secundaria\REGISTRO_DE_CAJA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\ASISTENTE_DE_INSTALACION_servidor\Eleccion_Servidor_o_remoto.Designer.vb">
+      <DependentUpon>Eleccion_Servidor_o_remoto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\ASISTENTE_DE_INSTALACION_servidor\Eleccion_Servidor_o_remoto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\ASISTENTE_DE_INSTALACION_servidor\Instalacion_del_servidorSQL.Designer.vb">
+      <DependentUpon>Instalacion_del_servidorSQL.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\ASISTENTE_DE_INSTALACION_servidor\Instalacion_del_servidorSQL.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\ASISTENTE_DE_INSTALACION_servidor\Module1.vb" />
+    <Compile Include="Presentacion\ASISTENTE_DE_INSTALACION_servidor\REGISTRO_DE_EMPRESA.Designer.vb">
+      <DependentUpon>REGISTRO_DE_EMPRESA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\ASISTENTE_DE_INSTALACION_servidor\REGISTRO_DE_EMPRESA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\ASISTENTE_DE_INSTALACION_servidor\USUARIOS_AUTORIZADOS_AL_SISTEMA.Designer.vb">
+      <DependentUpon>USUARIOS_AUTORIZADOS_AL_SISTEMA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\ASISTENTE_DE_INSTALACION_servidor\USUARIOS_AUTORIZADOS_AL_SISTEMA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\CAJA\APERTURA_DE_CAJA.Designer.vb">
+      <DependentUpon>APERTURA_DE_CAJA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\CAJA\APERTURA_DE_CAJA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\CAJA\Cajas_form.Designer.vb">
+      <DependentUpon>Cajas_form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\CAJA\Cajas_form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\CAJA\CIERRE_DE_CAJA.Designer.vb">
+      <DependentUpon>CIERRE_DE_CAJA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\CAJA\CIERRE_DE_CAJA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\CAJA\Cierre_de_turno.Designer.vb">
+      <DependentUpon>Cierre_de_turno.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\CAJA\Cierre_de_turno.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Configuraciones\Menu_de_configuraciones.Designer.vb">
+      <DependentUpon>Menu_de_configuraciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Configuraciones\Menu_de_configuraciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\ENVIOS_DE_PEDIDOS\Donde_enviar\Config_Visor_de_pedidos.Designer.vb">
+      <DependentUpon>Config_Visor_de_pedidos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\ENVIOS_DE_PEDIDOS\Donde_enviar\Config_Visor_de_pedidos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\ENVIOS_DE_PEDIDOS\Pantalla_de_pedidos\Pedidos_en_pantalla.Designer.vb">
+      <DependentUpon>Pedidos_en_pantalla.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\ENVIOS_DE_PEDIDOS\Pantalla_de_pedidos\Pedidos_en_pantalla.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\ENVIOS_DE_PEDIDOS\Ticket_de_pedido\Ticket_form.Designer.vb">
+      <DependentUpon>Ticket_form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\ENVIOS_DE_PEDIDOS\Ticket_de_pedido\Ticket_form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\ENVIOS_DE_PEDIDOS\Ticket_de_pedido\Ticket_pedido_listo.Designer.vb">
+      <DependentUpon>Ticket_pedido_listo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\ENVIOS_DE_PEDIDOS\Ticket_de_pedido\Ticket_pedido_listo.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Impresoras\Impresoras.Designer.vb">
+      <DependentUpon>Impresoras.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Impresoras\Impresoras.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\LOGIN\Cambio_de_usuario.Designer.vb">
+      <DependentUpon>Cambio_de_usuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\LOGIN\Cambio_de_usuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\LOGIN\LOGIN.Designer.vb">
+      <DependentUpon>LOGIN.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\LOGIN\LOGIN.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\MESAS_SALONES\Agregar_mesa_ok.Designer.vb">
+      <DependentUpon>Agregar_mesa_ok.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\MESAS_SALONES\Agregar_mesa_ok.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\MESAS_SALONES\Configuracion_de_propiedades_de_mesas.Designer.vb">
+      <DependentUpon>Configuracion_de_propiedades_de_mesas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\MESAS_SALONES\Configuracion_de_propiedades_de_mesas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\MESAS_SALONES\Configurar_mesas_ok.Designer.vb">
+      <DependentUpon>Configurar_mesas_ok.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\MESAS_SALONES\Configurar_mesas_ok.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\MESAS_SALONES\Salones.Designer.vb">
+      <DependentUpon>Salones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\MESAS_SALONES\Salones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\PRODUCTOS\Grupos_De_productos.Designer.vb">
+      <DependentUpon>Grupos_De_productos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\PRODUCTOS\Grupos_De_productos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\PRODUCTOS\Productos_rest.Designer.vb">
+      <DependentUpon>Productos_rest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\PRODUCTOS\Productos_rest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\PRODUCTOS\Registro_de_productos.Designer.vb">
+      <DependentUpon>Registro_de_productos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\PRODUCTOS\Registro_de_productos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\PUNTO DE VENTA\Mostrador_de_productos.Designer.vb">
+      <DependentUpon>Mostrador_de_productos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\PUNTO DE VENTA\Mostrador_de_productos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\PUNTO DE VENTA\Punto_de_venta.Designer.vb">
+      <DependentUpon>Punto_de_venta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\PUNTO DE VENTA\Punto_de_venta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\PUNTO DE VENTA\VisordeCuentas.Designer.vb">
+      <DependentUpon>VisordeCuentas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\PUNTO DE VENTA\VisordeCuentas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\PUNTO DE VENTA\Visor_de_mesas.Designer.vb">
+      <DependentUpon>Visor_de_mesas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\PUNTO DE VENTA\Visor_de_mesas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Presentacion\CONEXION\CONEXION_MANUAL.Designer.vb">
+      <DependentUpon>CONEXION_MANUAL.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\CONEXION\CONEXION_MANUAL.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\PANEL_DE_ADMINISTRACION_DEL_SOFTWARE\GENERADOR_DE_DISEÑO_HTML.Designer.vb">
+      <DependentUpon>GENERADOR_DE_DISEÑO_HTML.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\PANEL_DE_ADMINISTRACION_DEL_SOFTWARE\GENERADOR_DE_DISEÑO_HTML.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\PANEL_DE_ADMINISTRACION_DEL_SOFTWARE\Generar_Scrypt.Designer.vb">
+      <DependentUpon>Generar_Scrypt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\PANEL_DE_ADMINISTRACION_DEL_SOFTWARE\Generar_Scrypt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Reportes\Precuenta\Ticket_precuenta.Designer.vb">
+      <DependentUpon>Ticket_precuenta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Reportes\Precuenta\Ticket_precuenta.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Reportes\Precuenta\VistaPreciaPrecuenta.Designer.vb">
+      <DependentUpon>VistaPreciaPrecuenta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Reportes\Precuenta\VistaPreciaPrecuenta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Presentacion\Admin\Admin_form.resx">
+      <DependentUpon>Admin_form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Asistente_de_instalacion_de_Caja_Secundaria\Conexion_caja_secundaria.resx">
+      <DependentUpon>Conexion_caja_secundaria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Asistente_de_instalacion_de_Caja_Secundaria\REGISTRO_DE_CAJA.resx">
+      <DependentUpon>REGISTRO_DE_CAJA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\ASISTENTE_DE_INSTALACION_servidor\Eleccion_Servidor_o_remoto.resx">
+      <DependentUpon>Eleccion_Servidor_o_remoto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\ASISTENTE_DE_INSTALACION_servidor\Instalacion_del_servidorSQL.resx">
+      <DependentUpon>Instalacion_del_servidorSQL.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\ASISTENTE_DE_INSTALACION_servidor\REGISTRO_DE_EMPRESA.resx">
+      <DependentUpon>REGISTRO_DE_EMPRESA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\ASISTENTE_DE_INSTALACION_servidor\USUARIOS_AUTORIZADOS_AL_SISTEMA.resx">
+      <DependentUpon>USUARIOS_AUTORIZADOS_AL_SISTEMA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\CAJA\APERTURA_DE_CAJA.resx">
+      <DependentUpon>APERTURA_DE_CAJA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\CAJA\Cajas_form.resx">
+      <DependentUpon>Cajas_form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\CAJA\CIERRE_DE_CAJA.resx">
+      <DependentUpon>CIERRE_DE_CAJA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\CAJA\Cierre_de_turno.resx">
+      <DependentUpon>Cierre_de_turno.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Configuraciones\Menu_de_configuraciones.resx">
+      <DependentUpon>Menu_de_configuraciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\ENVIOS_DE_PEDIDOS\Donde_enviar\Config_Visor_de_pedidos.resx">
+      <DependentUpon>Config_Visor_de_pedidos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\ENVIOS_DE_PEDIDOS\Pantalla_de_pedidos\Pedidos_en_pantalla.resx">
+      <DependentUpon>Pedidos_en_pantalla.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\ENVIOS_DE_PEDIDOS\Ticket_de_pedido\Ticket_form.resx">
+      <DependentUpon>Ticket_form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\ENVIOS_DE_PEDIDOS\Ticket_de_pedido\Ticket_pedido_listo.resx">
+      <DependentUpon>Ticket_pedido_listo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Impresoras\Impresoras.resx">
+      <DependentUpon>Impresoras.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\LOGIN\Cambio_de_usuario.resx">
+      <DependentUpon>Cambio_de_usuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\LOGIN\LOGIN.resx">
+      <DependentUpon>LOGIN.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\MESAS_SALONES\Agregar_mesa_ok.resx">
+      <DependentUpon>Agregar_mesa_ok.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\MESAS_SALONES\Configuracion_de_propiedades_de_mesas.resx">
+      <DependentUpon>Configuracion_de_propiedades_de_mesas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\MESAS_SALONES\Configurar_mesas_ok.resx">
+      <DependentUpon>Configurar_mesas_ok.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\MESAS_SALONES\Salones.resx">
+      <DependentUpon>Salones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\PRODUCTOS\Grupos_De_productos.resx">
+      <DependentUpon>Grupos_De_productos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\PRODUCTOS\Productos_rest.resx">
+      <DependentUpon>Productos_rest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\PRODUCTOS\Registro_de_productos.resx">
+      <DependentUpon>Registro_de_productos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\PUNTO DE VENTA\Mostrador_de_productos.resx">
+      <DependentUpon>Mostrador_de_productos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\PUNTO DE VENTA\Punto_de_venta.resx">
+      <DependentUpon>Punto_de_venta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\PUNTO DE VENTA\VisordeCuentas.resx">
+      <DependentUpon>VisordeCuentas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\PUNTO DE VENTA\Visor_de_mesas.resx">
+      <DependentUpon>Visor_de_mesas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\CONEXION\CONEXION_MANUAL.resx">
+      <DependentUpon>CONEXION_MANUAL.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\PANEL_DE_ADMINISTRACION_DEL_SOFTWARE\GENERADOR_DE_DISEÑO_HTML.resx">
+      <DependentUpon>GENERADOR_DE_DISEÑO_HTML.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\PANEL_DE_ADMINISTRACION_DEL_SOFTWARE\Generar_Scrypt.resx">
+      <DependentUpon>Generar_Scrypt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Reportes\Precuenta\Ticket_precuenta.resx">
+      <DependentUpon>Ticket_precuenta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Reportes\Precuenta\VistaPreciaPrecuenta.resx">
+      <DependentUpon>VistaPreciaPrecuenta.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\accesorio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\advertencia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\archivos-adjuntos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boton-de-stop-de-un-reproductor-de-video.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\candado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Candy-Candy-candy-candy-9421203-572-508.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carrito-de-tienda-online.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerveza.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\COBROSSSS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\COBRSSSS.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\config_redentor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\correcto-simbolo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\efectivo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\etiqueta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gogeta.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\goku.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gokuqueda.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\homero.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_BLACK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\megafono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_BLACK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu_redentor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menuCajas_claro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mesa_vacia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monedas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monster.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\naruto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notificacion_BLACK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notificacion_BLACK2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notificacion_redentor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pasar-al-siguiente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sakura.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trofeo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\venta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fecha_derecha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fecha_izquierda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Presentacion\LOGIN\HTMLPage1.html" />
+    <None Include="Resources\myRest.png" />
+    <None Include="Resources\mynewrestaurant.jpg" />
+    <None Include="Resources\motodelivery.png" />
+    <None Include="Resources\chefmano.png" />
+    <None Include="Resources\BonAppetit.png" />
+    <None Include="Resources\PanelConfiguracion.png" />
+    <None Include="Resources\Buman.png" />
+    <None Include="Resources\fondo.png" />
+    <None Include="Resources\LogoBumanK.png" />
+    <None Include="Resources\verde.png" />
+    <None Include="Resources\amarillo.png" />
+    <None Include="Resources\azul.png" />
+    <None Include="Resources\naranja.png" />
+    <None Include="Resources\Rojo.png" />
+    <None Include="Resources\rosa.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,3 @@
+﻿Public Class PANEL_CONFIGURACIONES
+
+End Class
